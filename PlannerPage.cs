@@ -33,7 +33,7 @@ public partial class PlannerPage : Form
         InitializeComponent();
         this.Size = new Size(1200, 900);
 
-        // Установим реализацию по умолчанию (JSON)
+        // Two versions of memory realisation are available chosen
         // appStateStorage = new JsonAppStateStorage("Memory.json");
         appStateStorage = new SQLiteAppStateStorage("PlannerApp.sqlite");
 
@@ -96,7 +96,7 @@ public partial class PlannerPage : Form
                 string blockTag = blockPanel.Tag?.ToString();
                 if (blockTag == "TaskBlock" || blockTag == "CopyBlock")
                 {
-                    // Retrieve the date from the parent panel's Tag property (this will be nullable DateTime)
+                    // Retrieve the date from the parent panel's Tag property 
                     DateTime? parentDate = null;
                     if (blockPanel.Parent?.Tag is DateTime dateTag)
                     {
@@ -116,7 +116,7 @@ public partial class PlannerPage : Form
                         Visible = blockPanel.Visible
                     };
 
-                    // Add to appropriate list (TaskBlocks or CopyBlocks)
+                    // Add to appropriate list 
                     if (blockTag == "TaskBlock")
                     {
                         state.TaskBlocks.Add(blockState);
@@ -155,7 +155,7 @@ public partial class PlannerPage : Form
         blockPanel.Controls.Add(label);
 
         // Attach the MouseDown event for right-click functionality
-        blockPanel.MouseDown += TaskBlock_MouseDown;  // Here we attach the event handler
+        blockPanel.MouseDown += TaskBlock_MouseDown;  
 
         // Forward label events to the parent block
         label.MouseDown += (s, args) => TaskBlock_MouseDown(blockPanel, args);
@@ -203,7 +203,7 @@ public partial class PlannerPage : Form
 
     private void InitializeUI()
     {
-        // Create source panel (storage area)
+        // Create source panel 
         panelSource = new Panel
         {
             Name = "panelSource",
@@ -211,7 +211,7 @@ public partial class PlannerPage : Form
             BorderStyle = BorderStyle.FixedSingle
         };
 
-        // Create destination panel (target area) with horizontal scrolling enabled
+        // Create destination panel 
         panelTarget = new Panel
         {
             Name = "panelTarget",
@@ -223,7 +223,7 @@ public partial class PlannerPage : Form
             HorizontalScroll = { Enabled = true } // Enable horizontal scroll specifically
         };
 
-        // Add both panels to the Form
+        // Add both panels to the form
         this.Controls.Add(panelSource);
         this.Controls.Add(panelTarget);
 
@@ -294,10 +294,10 @@ public partial class PlannerPage : Form
 
     private void InitializeDayPanels()
     {
-        // Get today's date
+        
         DateTime today = DateTime.Today;
 
-        // Set the range: 7 days before and 7 days after today (total 9 days)
+        
         DateTime startDate = today.AddDays(-2);
 
         // Clear existing panels from the target panel and list
@@ -307,7 +307,7 @@ public partial class PlannerPage : Form
         // Create the day panels directly inside the target panel
         for (int i = 0; i < 9; i++)
         {
-            DateTime currentDay = startDate.AddDays(i); // Calculate the date for each panel
+            DateTime currentDay = startDate.AddDays(i); 
 
             Panel dayPanel = new Panel
             {
@@ -321,27 +321,27 @@ public partial class PlannerPage : Form
             dayPanels.Add(dayPanel);
             panelTarget.Controls.Add(dayPanel);
 
-            // Create and add the label for the day name (Top part of the panel)
+            // Create and add the label for the day name 
             Label dayNameLabel = new Label
             {
                 Text = currentDay.ToString("ddd"), // Day abbreviation (e.g., Mon)
                 AutoSize = false,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Dock = DockStyle.Top, // Dock it to the top of the panel
+                Dock = DockStyle.Top, 
                 Font = new Font("Arial", 10, FontStyle.Bold),
-                Height = 25 // Set a fixed height for the day name label
+                Height = 25 
             };
             dayPanel.Controls.Add(dayNameLabel);
 
-            // Create and add the label for the month and date (Bottom part of the panel)
+            
             Label lblDate = new Label
             {
-                Text = currentDay.ToString("MMM dd"), // Display the month and date (e.g., Jan 01)
+                Text = currentDay.ToString("MMM dd"), 
                 AutoSize = false,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Dock = DockStyle.Bottom, // Dock it to the bottom of the panel
+                Dock = DockStyle.Bottom, 
                 Font = new Font("Arial", 9, FontStyle.Regular),
-                Height = 25 // Set a fixed height for the date label
+                Height = 25 
             };
             dayPanel.Controls.Add(lblDate);
 
@@ -352,13 +352,13 @@ public partial class PlannerPage : Form
             }
         }
 
-        // Start the timer to monitor day changes
+        
         StartDayChangeTimer();
     }
 
     private void StartDayChangeTimer()
     {
-        // Declare the timer explicitly with the correct namespace
+        
         System.Windows.Forms.Timer dayChangeTimer = new System.Windows.Forms.Timer
         {
             Interval = 60000 // Check every 60 seconds
@@ -374,15 +374,15 @@ public partial class PlannerPage : Form
     {
         DateTime currentDate = DateTime.Today;
 
-        // Check if the date has changed
+        
         if (lastSavedDate.Date != currentDate.Date)
         {
             lastSavedDate = currentDate;
 
-            // Shift tasks and update panels
+            
             ShiftTasksToMatchDates();
 
-            // Save the updated state
+            
             SaveAppState();
         }
     }
@@ -401,7 +401,7 @@ public partial class PlannerPage : Form
             panelDate = panelDate.AddDays(1);
             dayPanel.Tag = panelDate;
 
-            // Update the label to reflect the new date
+            
             Label dateLabel = dayPanel.Controls.OfType<Label>().FirstOrDefault(lbl => lbl.Dock == DockStyle.Top);
             if (dateLabel != null)
             {
@@ -409,7 +409,7 @@ public partial class PlannerPage : Form
                 dateLabel.BackColor = panelDate.Date == today ? Color.Yellow : Color.Transparent;
             }
 
-            // Clear tasks if this panel is now outside the date range
+            
             if (panelDate < today.AddDays(-2) || panelDate > today.AddDays(6))
             {
                 dayPanel.Controls.Clear();
@@ -455,11 +455,11 @@ public partial class PlannerPage : Form
         int targetHeight = (int)(this.ClientSize.Height * 0.7); // 70% of height
         int sourceHeight = this.ClientSize.Height - targetHeight; // Remaining height (30%)
 
-        // Update target panel (horizontal layout)
+        // Update target panel 
         panelTarget.Location = new Point(0, 0); // Top of the form
         panelTarget.Size = new Size(this.ClientSize.Width, targetHeight); // Full width, 70% height
 
-        // Update source panel (bottom layout)
+        // Update source panel 
         panelSource.Location = new Point(0, targetHeight); // Bottom of the form
         panelSource.Size = new Size(this.ClientSize.Width, sourceHeight); // Full width, 30% height
 
@@ -528,7 +528,7 @@ public partial class PlannerPage : Form
                 originalLocation = taskBlock.Location;
                 originalParent = taskBlock.Parent as Panel;
 
-                // Bring the block to the front and add it directly to the form for full visibility
+                // Bring the block to the front and add it directly to the form 
                 this.Controls.Add(draggedPanel);
                 draggedPanel.BringToFront();
             }
@@ -617,7 +617,7 @@ public partial class PlannerPage : Form
                         panelSource.Controls.Add(copyBlock);
                     }
 
-                    break; // Exit the loop once the block is moved
+                    break; 
                 }
             }
 
@@ -698,7 +698,7 @@ public partial class PlannerPage : Form
 
                 block.Location = new Point(x, y);
 
-                blockIndex++; // Increment the index for blocks
+                blockIndex++; 
             }
         }
     }
