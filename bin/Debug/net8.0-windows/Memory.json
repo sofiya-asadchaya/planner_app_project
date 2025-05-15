@@ -1,0 +1,95 @@
+{
+  "TaskBlocks": [
+    {
+      "Text": "dmcdsmldsm",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel2",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-05-04T00:00:00+03:00"
+    }
+  ],
+  "CopyBlocks": [
+    {
+      "Text": "German lesson",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 0,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 76,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Class",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 187,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 76,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "dmcdsmldsm",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 374,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 76,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Lunch",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 561,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 76,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Breakfast",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 748,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 76,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Lunch",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel2",
+      "LocationX": 0,
+      "LocationY": 81,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-05-04T00:00:00+03:00"
+    },
+    {
+      "Text": "Breakfast",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel3",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-05-05T00:00:00+03:00"
+    }
+  ],
+  "LastSavedDate": "2025-05-04T00:00:00+03:00"
+}

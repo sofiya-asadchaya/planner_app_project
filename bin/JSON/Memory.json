@@ -1,0 +1,172 @@
+{
+  "TaskBlocks": [
+    {
+      "Text": "Audio book",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 0,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "1 bioinformatics breakthrought",
+      "Color": "LightGrey",
+      "ParentPanel": "dayPanel0",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-06T00:00:00+02:00"
+    },
+    {
+      "Text": "Road rules",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel2",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-08T00:00:00+02:00"
+    },
+    {
+      "Text": "Piano",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel2",
+      "LocationX": 0,
+      "LocationY": 81,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-08T00:00:00+02:00"
+    }
+  ],
+  "CopyBlocks": [
+    {
+      "Text": "Gym",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 187,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Study",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 374,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Laundry",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 561,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Road rules",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 748,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Piano",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 935,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Cook ",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 0,
+      "LocationY": 87,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Gym",
+      "Color": "LightGrey",
+      "ParentPanel": "dayPanel0",
+      "LocationX": 0,
+      "LocationY": 81,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-06T00:00:00+02:00"
+    },
+    {
+      "Text": "Cook ",
+      "Color": "LightGrey",
+      "ParentPanel": "dayPanel0",
+      "LocationX": 0,
+      "LocationY": 137,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-06T00:00:00+02:00"
+    },
+    {
+      "Text": "Gym",
+      "Color": "LightGrey",
+      "ParentPanel": "dayPanel1",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-07T00:00:00+02:00"
+    },
+    {
+      "Text": "Gym",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel2",
+      "LocationX": 0,
+      "LocationY": 137,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-08T00:00:00+02:00"
+    },
+    {
+      "Text": "Cook ",
+      "Color": "#A9B700",
+      "ParentPanel": "dayPanel3",
+      "LocationX": 0,
+      "LocationY": 25,
+      "Width": 234,
+      "Height": 51,
+      "Visible": true,
+      "ParentDate": "2025-02-09T00:00:00+02:00"
+    }
+  ],
+  "LastSavedDate": "2025-02-08T00:00:00+02:00"
+}

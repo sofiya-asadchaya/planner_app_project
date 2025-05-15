@@ -1,0 +1,83 @@
+{
+  "TaskBlocks": [],
+  "CopyBlocks": [
+    {
+      "Text": "Laundry",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 0,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Study",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 187,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Audio book",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 374,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Gym",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 561,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Piano",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 748,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Cook ",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 935,
+      "LocationY": 0,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    },
+    {
+      "Text": "Road rules",
+      "Color": "#A9B700",
+      "ParentPanel": "panelSource",
+      "LocationX": 0,
+      "LocationY": 87,
+      "Width": 177,
+      "Height": 77,
+      "Visible": true,
+      "ParentDate": null
+    }
+  ],
+  "LastSavedDate": "2025-03-12T00:00:00+02:00"
+}
