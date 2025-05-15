@@ -69,7 +69,7 @@ namespace Planner_app
 
             using var transaction = connection.BeginTransaction();
 
-            // Очистка таблиц
+            // Clear the tables
             var clearTaskBlocks = "DELETE FROM TaskBlocks";
             var clearCopyBlocks = "DELETE FROM CopyBlocks";
 
@@ -80,7 +80,7 @@ namespace Planner_app
             clearCommand.CommandText = clearCopyBlocks;
             clearCommand.ExecuteNonQuery();
 
-            // Сохранение TaskBlocks
+            // Save the TaskBlocks
             var insertTaskBlock = @"
             INSERT INTO TaskBlocks (Text, Color, ParentPanel, ParentDate, LocationX, LocationY, Width, Height, Visible)
             VALUES (@Text, @Color, @ParentPanel, @ParentDate, @LocationX, @LocationY, @Width, @Height, @Visible)";
@@ -101,7 +101,7 @@ namespace Planner_app
                 insertCommand.ExecuteNonQuery();
             }
 
-            // Сохранение CopyBlocks
+            // Save the CopyBlocks
             var insertCopyBlock = @"
             INSERT INTO CopyBlocks (Text, Color, ParentPanel, ParentDate, LocationX, LocationY, Width, Height, Visible)
             VALUES (@Text, @Color, @ParentPanel, @ParentDate, @LocationX, @LocationY, @Width, @Height, @Visible)";
@@ -132,7 +132,7 @@ namespace Planner_app
             using var connection = new SqliteConnection(_connectionString);
             connection.Open();
 
-            // Загрузка TaskBlocks
+            // Load the TaskBlocks
             var selectTaskBlocks = "SELECT * FROM TaskBlocks";
             using var taskCommand = connection.CreateCommand();
             taskCommand.CommandText = selectTaskBlocks;
@@ -154,7 +154,7 @@ namespace Planner_app
                 });
             }
 
-            // Загрузка CopyBlocks
+            // Load the CopyBlocks
             var selectCopyBlocks = "SELECT * FROM CopyBlocks";
             using var copyCommand = connection.CreateCommand();
             copyCommand.CommandText = selectCopyBlocks;
